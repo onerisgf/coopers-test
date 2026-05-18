@@ -92,7 +92,10 @@ export function LoginModal({ isOpen, onClose, onSuccess }) {
                 </button>
 
                 <div className="auth-modal-illustration" aria-hidden="true">
-                    <div className="auth-figure"></div>
+                    <img
+                        src="https://cdni.iconscout.com/illustration/premium/thumb/login-3305943-2757111.png"
+                        alt=""
+                    />
                 </div>
 
                 <div className="auth-modal-content">

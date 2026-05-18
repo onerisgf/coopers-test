@@ -27,14 +27,17 @@
     cursor: pointer;
 }
 
-.auth-modal-illustration {
-    display: none;
-}
+.auth-modal-illustration img {
+    display: block;
+    width: 150px;
+    height: auto;
+    object-fit: contain;
+  }
 
 .auth-modal-content h2 {
     margin: 0;
     color: #000000;
-    font-size: clamp(40px, 7vw, 72px);
+    font-size: clamp(40px, 7vw, 50px);
     line-height: 0.95;
 }
 

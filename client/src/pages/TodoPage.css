@@ -150,21 +150,34 @@
 }
 
 .task-check {
-    display: grid;
-    place-items: center;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     width: 18px;
     height: 18px;
+    padding: 0;
     border: 1px solid #ff8a2a;
     border-radius: 50%;
     background: #ffffff;
-    color: #ffffff;
-    font-size: 12px;
     cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    flex-shrink: 0;
 }
 
 .task-check-done {
     border-color: #46c75a;
     background: #46c75a;
+}
+
+.task-check-done::before {
+    content: '';
+    width: 4px;
+    height: 8px;
+    border-right: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    transform: rotate(45deg) translate(-1px, -1px);
 }
 
 .task-title {

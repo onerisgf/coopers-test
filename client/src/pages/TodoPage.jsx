@@ -253,9 +253,7 @@ export function TodoPage() {
                     className={task.done ? 'task-check task-check-done' : 'task-check'}
                     onClick={() => handleToggleTask(task)}
                     aria-label={task.done ? 'Mark as pending' : 'Mark as done'}
-                >
-                    {task.done ? '✓' : ''}
-                </button>
+                ></button>
 
                 {isEditing ? (
                     <input
