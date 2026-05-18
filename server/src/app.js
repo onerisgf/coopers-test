@@ -8,9 +8,20 @@ const app = express();
 
 // Libera o acesso do front-end local à API.
 // Em produção, essa URL deve ser substituída pela URL real do front-end.
+const allowedOrigins = [
+  'http://localhost:5173',
+  process.env.FRONTEND_URL,
+];
+
 app.use(cors({
-  origin: 'http://localhost:5173',
-  credentials: true
+  origin(origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    }
+
+    return callback(new Error('Not allowed by CORS'));
+  },
+  credentials: true,
 }));
 
 // Permite que a API receba dados em JSON no corpo das requisições.
