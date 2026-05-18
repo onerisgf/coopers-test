@@ -4,7 +4,7 @@ Projeto desenvolvido para avaliação Full Stack Developer.
 
 ## Links
 
-- Projeto online: https://SEU-LINK-DA-VERCEL.vercel.app
+- Projeto online: https://coopers-test-lyart.vercel.app
 - API: https://coopers-test-api.onrender.com
 
 ## Tecnologias
