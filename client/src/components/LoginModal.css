@@ -1,0 +1,119 @@
+.auth-modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    display: grid;
+    place-items: start center;
+    padding: 48px 16px;
+    background: rgba(0, 0, 0, 0.72);
+}
+
+.auth-modal {
+    position: relative;
+    display: grid;
+    gap: 24px;
+    width: min(100%, 820px);
+    padding: 48px 24px 32px;
+    background: #ffffff;
+}
+
+.auth-modal-close {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    border: 0;
+    background: transparent;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.auth-modal-illustration {
+    display: none;
+}
+
+.auth-modal-content h2 {
+    margin: 0;
+    color: #000000;
+    font-size: clamp(40px, 7vw, 72px);
+    line-height: 0.95;
+}
+
+.auth-modal-subtitle {
+    margin: 0 0 40px;
+    color: #46c75a;
+    font-size: clamp(28px, 4vw, 42px);
+    line-height: 1;
+}
+
+.auth-form {
+    display: grid;
+    gap: 18px;
+    max-width: 300px;
+}
+
+.form-field {
+    display: grid;
+    gap: 6px;
+}
+
+.form-field label {
+    font-weight: 700;
+}
+
+.form-field input {
+    height: 44px;
+    border: 1px solid #b7b7b7;
+    border-radius: 6px;
+    padding: 0 12px;
+    font: inherit;
+}
+
+.auth-submit {
+    height: 56px;
+    margin-top: 24px;
+    border: 0;
+    background: #46c75a;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.auth-submit:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.auth-error {
+    margin: 0;
+    color: #c62828;
+    font-size: 14px;
+}
+
+.auth-switch {
+    margin-top: 20px;
+    border: 0;
+    background: transparent;
+    color: #46c75a;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .auth-modal {
+        grid-template-columns: 220px 1fr;
+        padding: 72px 72px 48px;
+    }
+
+    .auth-modal-illustration {
+        display: block;
+        align-self: start;
+    }
+
+    .auth-figure {
+        width: 140px;
+        height: 180px;
+        border-radius: 60% 40% 50% 50%;
+        background: linear-gradient(135deg, #eeeeee 0%, #dddddd 100%);
+    }
+}
